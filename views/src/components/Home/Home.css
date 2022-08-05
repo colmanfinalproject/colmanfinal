@@ -1,0 +1,33 @@
+.container {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.content {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+
+.background {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.letsStart {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
