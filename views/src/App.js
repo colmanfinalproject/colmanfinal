@@ -6,6 +6,7 @@ import Marketplace from './components/Marketplace/Marketplace';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 
 import React from 'react';
+import CreateItem from './components/Marketplace/CreateItem/CreateItem';
 
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
       <Routes>
           <Route exact path='/' element={< Home />}></Route>
           <Route exact path='/marketplace' element={< Marketplace />}></Route>
+          <Route path="/items/">
+            <Route path="create" element={<CreateItem />} />
+          </Route>
+
       </Routes>
       </Router>
     </div>

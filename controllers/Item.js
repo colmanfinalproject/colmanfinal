@@ -1,5 +1,17 @@
+const Item = require('../models/Item')
+
 const create = async (req, res, next) => {
-    res.send('item created');
+    const {body} = req;
+    const {
+        title,
+        description,
+        image,
+        category
+    } = body;
+
+    const item = Item({title, description, image, category})
+    item.save();
+    res.status(200);
 }
 
 const getAllItems = async (req, res, next) => {
